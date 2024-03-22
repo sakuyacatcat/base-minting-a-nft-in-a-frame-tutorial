@@ -1,6 +1,5 @@
 import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
-import { NEXT_PUBLIC_URL } from './config';
 
 const frameMetadata = getFrameMetadata({
   buttons: [
@@ -10,18 +9,18 @@ const frameMetadata = getFrameMetadata({
     {
       action: 'tx',
       label: 'Send Base Sepolia',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
+      target: `https://base-minting-a-nft-in-a-frame-tutorial.vercel.app/api/tx`,
+      postUrl: `https://base-minting-a-nft-in-a-frame-tutorial.vercel.app/api/tx-success`,
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `https://base-minting-a-nft-in-a-frame-tutorial.vercel.app/park-3.png`,
     aspectRatio: '1:1',
   },
   input: {
     text: 'Tell me a story',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
+  postUrl: `https://base-minting-a-nft-in-a-frame-tutorial.vercel.app/api/frame`,
 });
 
 export const metadata: Metadata = {
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'zizzamia.xyz',
     description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`https://base-minting-a-nft-in-a-frame-tutorial.vercel.app/park-1.png`],
   },
   other: {
     ...frameMetadata,
